@@ -8,14 +8,15 @@ img {
 
 .container {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     align-items: center;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 2rem;
     border-radius: 30px;
     background: #ffffff;
