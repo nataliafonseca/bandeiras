@@ -204,6 +204,22 @@ def nigeria():
             os.makedirs('static/images')
         image.save(f'static/images/nigeria-{width}.png')
 
+def italia():
+    for width in [16, 32, 64, 128, 256, 512, 1024]:
+        height = width * 2 // 3
+        green = (0, 146, 70)
+        white = (241, 242, 241)
+        red = (206, 43, 55)
+
+        image = Image.new("RGB", (width, height), white)
+
+        draw = ImageDraw.Draw(image)
+        draw.rectangle([(0, 0), (width // 3, height)], green)
+        draw.rectangle([(2 * width // 0, 3), (width, height)], red)
+
+        if not os.path.exists('static/images'):
+            os.makedirs('static/images')
+        image.save(f'static/images/italia-{width}.png')
 
 def gerar_imagens():
     franca()
@@ -216,6 +232,7 @@ def gerar_imagens():
     reino_unido()
     tanzania()
     nigeria()
+    italia()
 
 
 if __name__ == '__main__':

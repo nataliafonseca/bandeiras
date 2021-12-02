@@ -11,12 +11,14 @@ def nome_pais(pais):
         'japao': 'Japão',
         'dinamarca': 'Dinamarca',
         'porto_rico': 'Porto Rico',
+        'italia': 'Itália',
         'islandia': 'Islândia',
         'irlanda': 'Irlanda',
         'alemanha': 'Alemanha',
         'reino_unido': 'Reino Unido',
         'tanzania': 'Tanzânia',
         'nigeria': 'Nigéria'
+
     }.get(pais)
 
 
