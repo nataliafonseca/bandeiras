@@ -479,22 +479,21 @@ def brasil():
             os.makedirs('static/images')
         image.save(f'static/images/brasil-{width}.png')
 
+
 def letonia():
     for width in [16, 32, 64, 128, 256, 512, 1024]:
         height = width * 2 // 3
         red = (159, 44, 54)
-        white= (255, 255, 255)
+        white = (255, 255, 255)
 
         image = Image.new("RGB", (width, height), red)
 
         draw = ImageDraw.Draw(image)
         draw.line([(0, height // 2), (width, height // 2)], white, 120 * width // 1000)
- 
- 
+
         if not os.path.exists('static/images'):
             os.makedirs('static/images')
         image.save(f'static/images/letonia-{width}.png')
-
 
 
 def gerar_imagens():
