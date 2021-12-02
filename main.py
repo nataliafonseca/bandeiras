@@ -17,7 +17,7 @@ def nome_pais(pais):
         'irlanda': 'Irlanda',
         'alemanha': 'Alemanha',
         'reino_unido': 'Reino Unido',
-        'republica_tcheca': 'República Tcheca',
+        'republica_tcheca': 'Tchéquia',
         'tanzania': 'Tanzânia',
         'nigeria': 'Nigéria',
         'somalia': 'Somália',
@@ -26,7 +26,10 @@ def nome_pais(pais):
         'bulgaria': 'Bulgária',
         'holanda': 'Holanda',
         'hungria': 'Hungria',
-        'russia': 'Rússia'
+        'russia': 'Rússia',
+        'polonia': 'Polônia',
+        'estonia':'Estônia',
+        'monaco' : 'Mônaco'
     }.get(pais)
 
 
