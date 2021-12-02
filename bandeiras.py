@@ -412,7 +412,7 @@ def polonia():
         image = Image.new("RGB", (width, height), white)
 
         draw = ImageDraw.Draw(image)
-        draw.rectangle([(0, 2), (width, height // 2)], red)
+        draw.rectangle([(0, 0), (width, height // 2)], red)
 
         if not os.path.exists('static/images'):
             os.makedirs('static/images')
@@ -428,7 +428,7 @@ def monaco():
         image = Image.new("RGB", (width, height), red)
 
         draw = ImageDraw.Draw(image)
-        draw.rectangle([(0, 2), (width, height // 2)], white)
+        draw.rectangle([(0, 0), (width, height // 2)], white)
 
         if not os.path.exists('static/images'):
             os.makedirs('static/images')
@@ -479,6 +479,23 @@ def brasil():
             os.makedirs('static/images')
         image.save(f'static/images/brasil-{width}.png')
 
+def letonia():
+    for width in [16, 32, 64, 128, 256, 512, 1024]:
+        height = width * 2 // 3
+        red = (159, 44, 54)
+        white= (255, 255, 255)
+
+        image = Image.new("RGB", (width, height), red)
+
+        draw = ImageDraw.Draw(image)
+        draw.line([(0, height // 2), (width, height // 2)], white, 120 * width // 1000)
+ 
+ 
+        if not os.path.exists('static/images'):
+            os.makedirs('static/images')
+        image.save(f'static/images/letonia-{width}.png')
+
+
 
 def gerar_imagens():
     franca()
@@ -505,6 +522,7 @@ def gerar_imagens():
     republica_tcheca()
     estonia()
     brasil()
+    letonia()
 
 
 if __name__ == '__main__':

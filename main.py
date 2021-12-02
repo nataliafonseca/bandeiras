@@ -30,7 +30,8 @@ def nome_pais(pais):
         'polonia': 'Polônia',
         'estonia': 'Estônia',
         'monaco': 'Mônaco',
-        'brasil': 'Brasil'
+        'brasil': 'Brasil',
+        'letonia': 'Letônia'
     }.get(pais)
 
 
