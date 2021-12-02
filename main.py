@@ -1,3 +1,4 @@
+import os
 import bandeiras
 from flask import Flask, render_template, request
 
@@ -34,4 +35,5 @@ def selecionar():
 
 
 bandeiras.gerar_imagens()
-app.run(host='localhost', port=8080)
+port = int(os.environ.get("PORT", 8080))
+app.run(host='0.0.0.0', port=port)
