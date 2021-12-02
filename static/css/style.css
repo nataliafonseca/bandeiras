@@ -1,0 +1,52 @@
+body {
+    background: #f7f7f7;
+}
+
+img {
+    border: 1px solid #e3e3e3;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 30px;
+    background: #ffffff;
+}
+
+.page-header {
+    margin: 2rem auto;
+    font-family: 'Amatic SC', sans-serif;
+}
+
+.page-header h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.subheader {
+    margin-bottom: 1rem;
+}
+
+.subheader h2 {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.tab-pane {
+    min-width: 1026px;
+    min-height: 684px;
+}
+
+.subheader {
+    display: flex;
+    justify-content: space-between;
+}

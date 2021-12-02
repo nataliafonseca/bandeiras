@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gerador de Bandeiras</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="page-header">
+            <h1>Gerador de Bandeiras</h1>
+        </div>
+
+        <div class="subheader">
+            <h2>{{ pais }}</h2>
+            <form action="/" method="post">
+                <select class="form-control form-control-lg" id="pais" name="pais" onchange="this.form.submit()">
+                    <option value="">Selecione o país</option>
+                    <option value="franca">França</option>
+                    <option value="japao">Japão</option>
+                </select>
+            </form>
+        </div>
+        <div class="tabs">
+            <ul class="nav nav-tabs mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-1024-tab" data-toggle="pill" href="#pills-1024" role="tab"
+                       aria-controls="pills-1024" aria-selected="true">1024px</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-512-tab" data-toggle="pill" href="#pills-512" role="tab"
+                       aria-controls="pills-512" aria-selected="true">512px</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-256-tab" data-toggle="pill" href="#pills-256" role="tab"
+                       aria-controls="pills-256" aria-selected="true">256px</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-128-tab" data-toggle="pill" href="#pills-128" role="tab"
+                       aria-controls="pills-128" aria-selected="true">128px</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-64-tab" data-toggle="pill" href="#pills-64" role="tab"
+                       aria-controls="pills-64" aria-selected="true">64px</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-32-tab" data-toggle="pill" href="#pills-32" role="tab"
+                       aria-controls="pills-32" aria-selected="true">32px</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-16-tab" data-toggle="pill" href="#pills-16" role="tab"
+                       aria-controls="pills-16" aria-selected="true">16px</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-1024" role="tabpanel" aria-labelledby="pills-1024-tab">
+                    <img src="{{ imagens.get(1024) }}" alt="Bandeira">
+                </div>
+                <div class="tab-pane fade show" id="pills-512" role="tabpanel" aria-labelledby="pills-512-tab">
+                    <img src="{{ imagens.get(512) }}" alt="Bandeira">
+                </div>
+                <div class="tab-pane fade show" id="pills-256" role="tabpanel" aria-labelledby="pills-256-tab">
+                    <img src="{{ imagens.get(256) }}" alt="Bandeira">
+                </div>
+                <div class="tab-pane fade show" id="pills-128" role="tabpanel" aria-labelledby="pills-128-tab">
+                    <img src="{{ imagens.get(128) }}" alt="Bandeira">
+                </div>
+                <div class="tab-pane fade show" id="pills-64" role="tabpanel" aria-labelledby="pills-64-tab">
+                    <img src="{{ imagens.get(64) }}" alt="Bandeira">
+                </div>
+                <div class="tab-pane fade show" id="pills-32" role="tabpanel" aria-labelledby="pills-32-tab">
+                    <img src="{{ imagens.get(32) }}" alt="Bandeira">
+                </div>
+                <div class="tab-pane fade show" id="pills-16" role="tabpanel" aria-labelledby="pills-16-tab">
+                    <img src="{{ imagens.get(16) }}" alt="Bandeira">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+</body>
+</html>
