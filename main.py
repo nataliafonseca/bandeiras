@@ -17,8 +17,14 @@ def nome_pais(pais):
         'alemanha': 'Alemanha',
         'reino_unido': 'Reino Unido',
         'tanzania': 'Tanzânia',
-        'nigeria': 'Nigéria'
-
+        'nigeria': 'Nigéria',
+        'somalia': 'Somália',
+        'chile': 'Chile',
+        'austria': 'Austria',
+        'bulgaria': 'Bulgária',
+        'holanda': 'Holanda',
+        'hungria': 'Hungria',
+        'russia': 'Rússia'
     }.get(pais)
 
 

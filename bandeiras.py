@@ -204,6 +204,7 @@ def nigeria():
             os.makedirs('static/images')
         image.save(f'static/images/nigeria-{width}.png')
 
+
 def italia():
     for width in [16, 32, 64, 128, 256, 512, 1024]:
         height = width * 2 // 3
@@ -215,11 +216,138 @@ def italia():
 
         draw = ImageDraw.Draw(image)
         draw.rectangle([(0, 0), (width // 3, height)], green)
-        draw.rectangle([(2 * width // 0, 3), (width, height)], red)
+        draw.rectangle([(2 * width // 3, 0), (width, height)], red)
 
         if not os.path.exists('static/images'):
             os.makedirs('static/images')
         image.save(f'static/images/italia-{width}.png')
+
+
+def somalia():
+    for width in [16, 32, 64, 128, 256, 512, 1024]:
+        height = width * 2 // 3
+        white = (255, 255, 255)
+        blue = (63, 138, 222)
+
+        image = Image.new("RGB", (width, height), blue)
+
+        draw = ImageDraw.Draw(image)
+        estrela = vertices_estrela((width // 2, height // 2), width * 272 // 900, height * 256 // 600)
+        draw.polygon(estrela, white)
+
+        if not os.path.exists('static/images'):
+            os.makedirs('static/images')
+        image.save(f'static/images/somalia-{width}.png')
+
+
+def chile():
+    for width in [16, 32, 64, 128, 256, 512, 1024]:
+        height = width * 2 // 3
+        white = (255, 255, 255)
+        blue = (0, 57, 166)
+        red = (215, 43, 31)
+
+        image = Image.new("RGB", (width, height), white)
+
+        draw = ImageDraw.Draw(image)
+        draw.rectangle([(0, 0), (width // 3, height // 2)], blue)
+        draw.rectangle([(0, height // 2), (width, height)], red)
+        estrela = vertices_estrela((width // 6, height // 4), width * 142.7 // 900, height * 135.7 // 600)
+        draw.polygon(estrela, white)
+
+        if not os.path.exists('static/images'):
+            os.makedirs('static/images')
+        image.save(f'static/images/chile-{width}.png')
+
+
+def austria():
+    for width in [16, 32, 64, 128, 256, 512, 1024]:
+        height = width * 2 // 3
+        white = (255, 255, 255)
+        red = (238, 36, 54)
+
+        image = Image.new("RGB", (width, height), white)
+
+        draw = ImageDraw.Draw(image)
+        draw.rectangle([(0, 0), (width, height // 3)], red)
+        draw.rectangle([(0, 2 * height // 3), (width, height)], red)
+
+        if not os.path.exists('static/images'):
+            os.makedirs('static/images')
+        image.save(f'static/images/austria-{width}.png')
+
+
+def bulgaria():
+    for width in [16, 32, 64, 128, 256, 512, 1024]:
+        height = width * 2 // 3
+        white = (255, 255, 255)
+        red = (215, 33, 10)
+        green = (0, 151, 110)
+
+        image = Image.new("RGB", (width, height), green)
+
+        draw = ImageDraw.Draw(image)
+        draw.rectangle([(0, 0), (width, height // 3)], white)
+        draw.rectangle([(0, 2 * height // 3), (width, height)], red)
+
+        if not os.path.exists('static/images'):
+            os.makedirs('static/images')
+        image.save(f'static/images/bulgaria-{width}.png')
+
+
+def holanda():
+    for width in [16, 32, 64, 128, 256, 512, 1024]:
+        height = width * 2 // 3
+        white = (255, 255, 255)
+        red = (176, 22, 35)
+        blue = (27, 68, 140)
+
+        image = Image.new("RGB", (width, height), white)
+
+        draw = ImageDraw.Draw(image)
+        draw.rectangle([(0, 0), (width, height // 3)], red)
+        draw.rectangle([(0, 2 * height // 3), (width, height)], blue)
+
+        if not os.path.exists('static/images'):
+            os.makedirs('static/images')
+        image.save(f'static/images/holanda-{width}.png')
+
+
+def hungria():
+    for width in [16, 32, 64, 128, 256, 512, 1024]:
+        height = width * 1 // 2
+        white = (255, 255, 255)
+        red = (207, 36, 54)
+        green = (69, 113, 79)
+
+        image = Image.new("RGB", (width, height), white)
+
+        draw = ImageDraw.Draw(image)
+        draw.rectangle([(0, 0), (width, height // 3)], red)
+        draw.rectangle([(0, 2 * height // 3), (width, height)], green)
+
+        if not os.path.exists('static/images'):
+            os.makedirs('static/images')
+        image.save(f'static/images/hungria-{width}.png')
+
+
+def russia():
+    for width in [16, 32, 64, 128, 256, 512, 1024]:
+        height = width * 2 // 3
+        white = (255, 255, 255)
+        red = (214, 39, 24)
+        blue = (0, 54, 167)
+
+        image = Image.new("RGB", (width, height), blue)
+
+        draw = ImageDraw.Draw(image)
+        draw.rectangle([(0, 0), (width, height // 3)], white)
+        draw.rectangle([(0, 2 * height // 3), (width, height)], red)
+
+        if not os.path.exists('static/images'):
+            os.makedirs('static/images')
+        image.save(f'static/images/russia-{width}.png')
+
 
 def gerar_imagens():
     franca()
@@ -233,6 +361,13 @@ def gerar_imagens():
     tanzania()
     nigeria()
     italia()
+    somalia()
+    chile()
+    austria()
+    bulgaria()
+    holanda()
+    hungria()
+    russia()
 
 
 if __name__ == '__main__':
