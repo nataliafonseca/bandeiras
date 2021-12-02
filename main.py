@@ -28,8 +28,9 @@ def nome_pais(pais):
         'hungria': 'Hungria',
         'russia': 'Rússia',
         'polonia': 'Polônia',
-        'estonia':'Estônia',
-        'monaco' : 'Mônaco'
+        'estonia': 'Estônia',
+        'monaco': 'Mônaco',
+        'brasil': 'Brasil'
     }.get(pais)
 
 
