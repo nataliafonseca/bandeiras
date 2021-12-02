@@ -17,6 +17,7 @@ def nome_pais(pais):
         'irlanda': 'Irlanda',
         'alemanha': 'Alemanha',
         'reino_unido': 'Reino Unido',
+        'republica_tcheca': 'República Tcheca',
         'tanzania': 'Tanzânia',
         'nigeria': 'Nigéria'
 
