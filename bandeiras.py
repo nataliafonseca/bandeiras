@@ -240,6 +240,25 @@ def colombia():
             os.makedirs('static/images')
         image.save(f'static/images/colombia-{width}.png')
 
+def republica_tcheca():
+    for width in [16, 32, 64, 128, 256, 512, 1024]:
+        height = width * 2 // 3
+        white = (255, 255, 255)
+        red = (216, 12, 19)
+        blue = (8, 67, 127)
+
+        image = Image.new("RGB", (width, height), white)
+
+        draw = ImageDraw.Draw(image)
+        draw.rectangle([(0, 2), (width, height // 2)], red)
+        draw.polygon([(0, 0), (0, height), (width * 512 // 900, height // 2)], blue)
+        
+
+        if not os.path.exists('static/images'):
+            os.makedirs('static/images')
+        image.save(f'static/images/republica_tcheca-{width}.png')
+
+
 
 def somalia():
     for width in [16, 32, 64, 128, 256, 512, 1024]:
@@ -387,6 +406,7 @@ def gerar_imagens():
     holanda()
     hungria()
     russia()
+    republica_tcheca()
 
 
 if __name__ == '__main__':
