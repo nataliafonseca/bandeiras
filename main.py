@@ -9,6 +9,7 @@ def nome_pais(pais):
     return {
         'franca': 'França',
         'japao': 'Japão',
+        'colombia': 'Colômbia',
         'dinamarca': 'Dinamarca',
         'porto_rico': 'Porto Rico',
         'italia': 'Itália',

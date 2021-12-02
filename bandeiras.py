@@ -215,11 +215,29 @@ def italia():
 
         draw = ImageDraw.Draw(image)
         draw.rectangle([(0, 0), (width // 3, height)], green)
-        draw.rectangle([(2 * width // 0, 3), (width, height)], red)
+        draw.rectangle([(2 * width // 3, 0), (width, height)], red)
 
         if not os.path.exists('static/images'):
             os.makedirs('static/images')
         image.save(f'static/images/italia-{width}.png')
+
+def colombia():
+    for width in [16, 32, 64, 128, 256, 512, 1024]:
+        height = width * 2 // 3
+        yellow = (254, 219, 13)
+        blue = (1, 56, 147)
+        red = (206, 17, 39)
+
+        image = Image.new("RGB", (width, height), yellow)
+
+        draw = ImageDraw.Draw(image)
+        draw.rectangle([(0, 2 * height // 4), (width, height)], blue)
+        draw.rectangle([(0, 3 * height // 4), (width, height)], red)
+ 
+        if not os.path.exists('static/images'):
+            os.makedirs('static/images')
+        image.save(f'static/images/colombia-{width}.png')
+
 
 def gerar_imagens():
     franca()
@@ -233,6 +251,7 @@ def gerar_imagens():
     tanzania()
     nigeria()
     italia()
+    colombia()
 
 
 if __name__ == '__main__':
